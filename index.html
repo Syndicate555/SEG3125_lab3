@@ -79,77 +79,7 @@
           aria-label="Toggle navigation"
         >
         </button>
-        <div>
-              <!-- Tab links, each one with an onclick event associated with it -->
-              <div class="tab" style="align-items: center;">
-                <button class="tablinks" onclick="openInfo(event, 'Client')">
-                  Client
-                </button>
-                <button class="tablinks" onclick="openInfo(event, 'Products')">
-                  Products
-                </button>
-                <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-              </div>
-          
-              <!-- Tab content -->
-              <div id="Client" class="tabcontent">
-                <h3>Client Information</h3>
-                <p>Tell us a bit about you.</p>
-                Choose a Category:
-                <select
-                  id="dietSelect"
-                  name="dietSelect"
-                  onchange="populateListProductChoices(this.id, 'displayProduct')"
-                >
-                  <option value=""></option>
-                  <option value="Vegetarian">Vegetarian Only</option>
-                  <option value="VegetarianAndGlutenFree"
-                    >Vegetarian and Gluten-Free</option
-                  >
-                  <option value="GlutenFree">GlutenFree Only</option>
-                  <option value="None">None</option>
-                </select>
-                <br />
-                <br />
-                <div>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="Organic"
-                      value="Organic"
-                    />Organic</label
-                  >
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="NonOrganic"
-                      value="NonOrganic"
-                    />Non-Organic</label
-                  >
-                </div>
-              </div>
-          
-              <div id="Products" class="tabcontent">
-                <h3>Your targeted products</h3>
-                <p>We preselected products based on your restrictions.</p>
-                Choose items to buy:
-                <div id="displayProduct"></div>
-                <button
-                  id="addCart"
-                  type="button"
-                  class="block"
-                  onclick="selectedItems()"
-                >
-                  Add selected items to cart.
-                </button>
-              </div>
-          
-              <div id="Cart" class="tabcontent">
-                <h3>Cart</h3>
-                <p>Here is your cart.</p>
-                <div id="displayCart"></div>
-              </div>
-        </div>
+        
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
@@ -202,9 +132,7 @@
             >
               <div class="col-sm-12 ftco-animate text-center">
                 <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
-                <h2 class="subheading mb-4">
-                  We deliver organic vegetables &amp; fruits
-                </h2>
+                
                 <p><a href="#" class="btn btn-primary">View Details</a></p>
               </div>
             </div>
@@ -212,7 +140,79 @@
         </div>
       </div>
     </section>
+<section>
+  <div>
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab" style="align-items: center;">
+      <button class="tablinks" onclick="openInfo(event, 'Client')">
+        Client
+      </button>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">
+        Products
+      </button>
+      <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    </div>
 
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+      <h3>Client Information</h3>
+      <p>Tell us a bit about you.</p>
+      Choose a Category:
+      <select
+        id="dietSelect"
+        name="dietSelect"
+        onchange="populateListProductChoices(this.id, 'displayProduct')"
+      >
+        <option value=""></option>
+        <option value="Vegetarian">Vegetarian Only</option>
+        <option value="VegetarianAndGlutenFree"
+          >Vegetarian and Gluten-Free</option
+        >
+        <option value="GlutenFree">GlutenFree Only</option>
+        <option value="None">None</option>
+      </select>
+      <br />
+      <br />
+      <div>
+        <label
+          ><input
+            type="checkbox"
+            name="Organic"
+            value="Organic"
+          />Organic</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="NonOrganic"
+            value="NonOrganic"
+          />Non-Organic</label
+        >
+      </div>
+    </div>
+
+    <div id="Products" class="tabcontent">
+      <h3>Your targeted products</h3>
+      <p>We preselected products based on your restrictions.</p>
+      Choose items to buy:
+      <div id="displayProduct"></div>
+      <button
+        id="addCart"
+        type="button"
+        class="block"
+        onclick="selectedItems()"
+      >
+        Add selected items to cart.
+      </button>
+    </div>
+
+    <div id="Cart" class="tabcontent">
+      <h3>Cart</h3>
+      <p>Here is your cart.</p>
+      <div id="displayCart"></div>
+    </div>
+</div>
+</section>
     <section class="ftco-section">
       <div class="container">
         <div class="row no-gutters ftco-services">
